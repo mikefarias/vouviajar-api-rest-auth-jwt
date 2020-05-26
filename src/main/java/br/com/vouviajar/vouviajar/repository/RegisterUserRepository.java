@@ -6,4 +6,4 @@ import org.springframework.stereotype.Repository;
 import br.com.vouviajar.vouviajar.model.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {} 
+public interface RegisterUserRepository extends JpaRepository<User, Long> {} 

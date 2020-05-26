@@ -7,32 +7,33 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
 @Table(name = "user", schema = "vouviajar")
+@NoArgsConstructor @AllArgsConstructor
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Getter private Long id;
 
     @Column
-    private String name;
+    @Setter @Getter private String username;
 
-    public String getName(){
-        return name;
-    }
+    @Column
+    @Setter @Getter private String email;
 
-    public void setName(String name){
-        this.name = name;
-    }
+    @Column
+    @Setter @Getter private String password;
 
-    public long getId(){
-        return id;
+    public User(String username, String email, String password){
+        this.username = username;
+        this.email = email;
+        this.password = password;
     }
-
-    public void setId(long id){
-        this.id = id;
-    }
-    
 
 }
