@@ -7,13 +7,13 @@ import lombok.NoArgsConstructor;
 import br.com.vouviajar.vouviajar.model.User;
 
 @AllArgsConstructor @NoArgsConstructor 
-public class LoginDTO {
+public class CredentialsDTO {
     
     @Getter private String username;
     @Getter private String password;
     
-    public static LoginDTO toDTO(User user){
-        return new LoginDTO(user.getUsername(), user.getPassword());
+    public static CredentialsDTO toDTO(User user){
+        return new CredentialsDTO(user.getUsername(), user.getPassword());
 
     }
     
