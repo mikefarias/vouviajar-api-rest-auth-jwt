@@ -32,5 +32,10 @@ public class LoginService {
         }
         return user;
     }
+
+    public Optional<User> getUser(Long idUser){
+        Optional<User> user = loginRepository.findById(idUser);
+        return user;
+    }
     
 }

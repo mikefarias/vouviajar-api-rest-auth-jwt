@@ -11,4 +11,6 @@ import br.com.vouviajar.vouviajar.model.User;
 public interface LoginRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByUsername(String login);
+
+    Optional<User> findById(Long idUser);
 } 
