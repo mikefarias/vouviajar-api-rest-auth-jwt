@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 import br.com.vouviajar.vouviajar.model.User;
 
 @Repository
-public interface LoginRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
-    Optional<User> findByUsername(String login);
+    Optional<User> findByUsername(String username);
 
     Optional<User> findById(Long idUser);
 } 

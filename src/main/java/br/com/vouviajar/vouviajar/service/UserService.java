@@ -7,17 +7,17 @@ import org.springframework.stereotype.Service;
 
 import br.com.vouviajar.vouviajar.dto.CredentialsDTO;
 import br.com.vouviajar.vouviajar.model.User;
-import br.com.vouviajar.vouviajar.repository.LoginRepository;
+import br.com.vouviajar.vouviajar.repository.UserRepository;
 import br.com.vouviajar.vouviajar.exception.PasswordInvalidException;
 import br.com.vouviajar.vouviajar.exception.UsernameInvalidException;
 
 @Service
-public class LoginService {
+public class UserService {
 
-    private LoginRepository loginRepository; 
+    private UserRepository loginRepository; 
 
     @Autowired
-    public LoginService(LoginRepository loginRepository){
+    public UserService(UserRepository loginRepository){
         this.loginRepository = loginRepository;
     }
 
