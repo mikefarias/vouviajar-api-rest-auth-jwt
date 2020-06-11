@@ -22,7 +22,7 @@ import br.com.vouviajar.vouviajar.service.UserService;
 
 @RestController
 @RequestMapping("/api/v1")
-public class AutenticacaoController {
+public class AuthenticationController {
 
 	@Autowired
 	UserService userService;
