@@ -12,7 +12,9 @@ import br.com.vouviajar.vouviajar.dto.AutheticatedUserDTO;
 import br.com.vouviajar.vouviajar.dto.RegisterUserDTO;
 import br.com.vouviajar.vouviajar.model.User;
 import br.com.vouviajar.vouviajar.service.UserService;
+import io.swagger.annotations.Api;
 
+@Api(tags = "user")
 @RestController
 @RequestMapping("/api/v1")
 public class UserController {

@@ -20,6 +20,9 @@ import br.com.vouviajar.vouviajar.dto.JwtResponseDTO;
 import br.com.vouviajar.vouviajar.service.JwtUserDetailsService;
 import br.com.vouviajar.vouviajar.service.UserService;
 
+import io.swagger.annotations.Api;
+
+@Api(tags = "authentication")
 @RestController
 @RequestMapping("/api/v1")
 public class AuthenticationController {
