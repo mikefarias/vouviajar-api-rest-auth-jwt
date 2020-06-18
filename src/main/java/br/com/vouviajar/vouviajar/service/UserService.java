@@ -26,7 +26,7 @@ public class UserService {
     }
 
     public Optional<User> login(CredentialsDTO credentials){
-        Optional<User> user = userRepository.findByUsername(credentials.getUsername());
+        Optional<User> user = userRepository.findByUsername(credentials.getEmail());
         if(user.isEmpty()){
             throw new UsernameInvalidException();
         }

@@ -9,11 +9,11 @@ import br.com.vouviajar.vouviajar.model.User;
 @AllArgsConstructor @NoArgsConstructor 
 public class CredentialsDTO {
     
-    @Getter private String username;
+    @Getter private String email;
     @Getter private String password;
     
     public static CredentialsDTO toDTO(User user){
-        return new CredentialsDTO(user.getUsername(), user.getPassword());
+        return new CredentialsDTO(user.getEmail(), user.getPassword());
 
     }
     

@@ -12,12 +12,11 @@ import lombok.Setter;
 @AllArgsConstructor @NoArgsConstructor
 public class RegisterUserDTO extends User{
     
-    @Getter @Setter private String username;
     @Getter @Setter private String email;
     @Getter @Setter private String password;
 
     public User toUser(){
-        return new User(getUsername(), getEmail(), getPassword());
+        return new User(getEmail(), getPassword());
     }
 
 }

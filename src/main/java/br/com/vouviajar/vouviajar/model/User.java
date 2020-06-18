@@ -22,16 +22,12 @@ public class User {
     @Getter private Long id;
 
     @Column
-    @Setter @Getter private String username;
-
-    @Column
     @Setter @Getter private String email;
 
     @Column
     @Setter @Getter private String password;
 
-    public User(String username, String email, String password){
-        this.username = username;
+    public User(String email, String password){
         this.email = email;
         this.password = password;
     }
